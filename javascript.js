@@ -15,24 +15,23 @@ function getComputerChoice () {
 
 function playRound () {
 
-    /*let x = prompt("Choose Rock Paper or Scissors");
-    
-    let Y = x;
-    if (Y != rock || paper || scissors ) {
-        return ("You have to choose between rock paper scissors");
+    let x = prompt("Choose Rock Paper or Scissors").toLowerCase();
+   
+
+    if ( x === "rock") {
+        x = 0 ;
+    }
+    else if ( x === "paper") {
+        x = 1 ;
+    }
+    else if ( x === "scissors") {
+        x = 2 ;
     }
     else {
-
-    }*/
-
+        return ("You have to choose between rock paper scissors");
+    }
     
-
-    let rock = 0
-    let paper = 1
-    let scissors =2
-
-    let playerSelection = 0
-
+    let playerSelection = x
     let computerSelection = Math.floor(Math.random() * 3);
 
     
@@ -58,5 +57,4 @@ function playRound () {
         return ("It's a tie!");
     }
 }
-
 console.log(playRound())
