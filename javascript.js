@@ -7,9 +7,8 @@ function getComputerChoice () {
     return arrayRPS [randomNumber]
 }
 
-function playRound (playerSelection, computerSelection) {
-
-    /*let x = prompt("Choose Rock Paper or Scissors").toLowerCase();
+function getPlayerChoice () {
+    let x = prompt("Choose Rock Paper or Scissors").toLowerCase();
    
     if ( x === "rock") {
         x = "rock" ;
@@ -23,9 +22,9 @@ function playRound (playerSelection, computerSelection) {
     else {
         return ("You have to choose between rock paper scissors");
     }
-    
-    let playerSelection = x*/
-    
+}
+
+function playRound (playerSelection, computerSelection) {
     if ( playerSelection === "rock" && computerSelection === "paper") {
         return ("You Lose! Paper beats Rock") && computerScore++ ;    
     }
@@ -51,7 +50,7 @@ function playRound (playerSelection, computerSelection) {
 
 function game () {
     for ( let i = 0; i < 5; i++ ) {
-        const playerSelection = "rock";
+        const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice ();
         console.log(playRound ( playerSelection, computerSelection ))
     }
