@@ -52,19 +52,13 @@ function playRound (playerSelection, computerSelection) {
         playerScore++
         return ("You Win! Scissors beats Paper") ;
     }
-    else if (playerSelection === "paper" && computerSelection === "paper") {
-        return ("It's a tie!");
-    }
-    else if (playerSelection === "rock" && computerSelection === "rockr") {
-        return ("It's a tie!");
-    }
-    else if (playerSelection === "scissors" && computerSelection === "scissors") {
+    else if ( playerSelection === computerSelection ) {
         return ("It's a tie!");
     }
 }
 
 function game () {
-    for ( let = 0 ;i < 5; i++ ) {
+    for ( let = 0; i < 5 ; i++ ;) {
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice ();
         console.log(playRound ( playerSelection, computerSelection ))
