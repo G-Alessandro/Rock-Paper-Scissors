@@ -19,9 +19,10 @@ function getPlayerChoice () {
     else if ( x === "scissors") {
         return x = "scissors" ;
     }
-    else {
+    /*else {
+        
         return ("You have to choose between rock paper scissors");
-    }
+    }*/
 }
 
 function playRound (playerSelection, computerSelection) {
@@ -61,18 +62,19 @@ function game () {
         console.log(playRound ( playerSelection, computerSelection ))
         console.log(playerScore, computerScore)
     }
+        console.log(gameEnd (playerScore, computerScore));
 }
-function gameEnd () {
+
+function gameEnd (playerScore, computerScore) {
     if (playerScore > computerScore) {
-        return ("You won!")
+        return ("You won the game!")
     }
     else if (playerScore < computerScore) {
-        return ("You lost! Computer won! ")
+        return ("You lost! Computer won the game! ")
     }
     else if ( playerScore === computerScore ) {
         return ("Tie!")
     }
 }
-
 
 game ()
