@@ -1,5 +1,6 @@
-playerScore = 0
-computerScore = 0
+let playerScore = 0
+let computerScore = 0
+let i = 0
 
 function getComputerChoice () {
     let arrayRPS = ["rock", "paper", "scissors"]
@@ -19,10 +20,11 @@ function getPlayerChoice () {
     else if ( x === "scissors") {
         return x = "scissors" ;
     }
-    /*else {
-        
-        return ("You have to choose between rock paper scissors");
-    }*/
+    else {
+        i--
+        alert ("You have to choose between rock paper scissors");
+        console.log ("You have to choose between rock paper scissors")
+    }
 }
 
 function playRound (playerSelection, computerSelection) {
@@ -50,19 +52,26 @@ function playRound (playerSelection, computerSelection) {
         playerScore++
         return ("You Win! Scissors beats Paper") ;
     }
-    else {
+    else if (playerSelection === "paper" && computerSelection === "paper") {
+        return ("It's a tie!");
+    }
+    else if (playerSelection === "rock" && computerSelection === "rockr") {
+        return ("It's a tie!");
+    }
+    else if (playerSelection === "scissors" && computerSelection === "scissors") {
         return ("It's a tie!");
     }
 }
 
 function game () {
-    for ( let i = 0; i < 5; i++ ) {
+    for ( let = 0 ;i < 5; i++ ) {
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice ();
         console.log(playRound ( playerSelection, computerSelection ))
         console.log(playerScore, computerScore)
     }
         console.log(gameEnd (playerScore, computerScore));
+        console.log(playerScore, computerScore)
 }
 
 function gameEnd (playerScore, computerScore) {
