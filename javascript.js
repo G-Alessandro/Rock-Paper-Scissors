@@ -22,8 +22,8 @@ function getPlayerChoice () {
     }
     else {
         i--
-        alert ("You have to choose between rock paper scissors");
-        console.log ("You have to choose between rock paper scissors")
+        alert ("You have to choose between rock paper scissors")
+        console.log ("You have to choose between rock paper scissors");
     }
 }
 
@@ -53,12 +53,12 @@ function playRound (playerSelection, computerSelection) {
         return ("You Win! Scissors beats Paper") ;
     }
     else if ( playerSelection === computerSelection ) {
-        return ("It's a tie!");
+        return (`It's a tie! You both picked ${playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase()}` );
     }
 }
 
 function game () {
-    for ( let = 0; i < 5 ; i++ ;) {
+    for ( let = 0; i < 5 ; i++ ) {
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice ();
         console.log(playRound ( playerSelection, computerSelection ))
